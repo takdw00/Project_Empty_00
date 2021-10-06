@@ -1,0 +1,629 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'ko' Physical Memory: 8101 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\03_Programs\00_Programs\UnityEditor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/05_Works/Public/GameProjects/SGG/Team Empty/ProjectFiles/Test
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55000
+Successfully changed project path to: D:/05_Works/Public/GameProjects/SGG/Team Empty/ProjectFiles/Test
+D:/05_Works/Public/GameProjects/SGG/Team Empty/ProjectFiles/Test
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 71.13 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path D:/03_Programs/00_Programs/UnityEditor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/05_Works/Public/GameProjects/SGG/Team Empty/ProjectFiles/Test/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce MX150 (ID=0x1d10)
+    Vendor:   
+    VRAM:     4027 MB
+    Driver:   24.21.13.9907
+Initialize mono
+Mono path[0] = 'D:/03_Programs/00_Programs/UnityEditor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'D:/03_Programs/00_Programs/UnityEditor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/03_Programs/00_Programs/UnityEditor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/03_Programs/00_Programs/UnityEditor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001776 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 73.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.197 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003737 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 74.83 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.421 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2788 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 140.5 MB.
+System memory in use after: 138.9 MB.
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 3215.
+Total: 4.443400 ms (FindLiveObjects: 0.474800 ms CreateObjectMapping: 0.183900 ms MarkObjects: 2.459800 ms  DeleteObjects: 1.323200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Pary3.png
+  artifactKey: Guid(161ec222403e9a6469e7da5dc54563f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Pary3.png using Guid(161ec222403e9a6469e7da5dc54563f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc8e60297518b599932d3cd2000ff7a1') in 0.375491 seconds
+  Import took 0.403039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.639143 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Pary.png
+  artifactKey: Guid(7db294e19149e594bbbb94cc2daaeffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Pary.png using Guid(7db294e19149e594bbbb94cc2daaeffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fa002165e90b09f92753d00101b58c8') in 0.232407 seconds
+  Import took 0.370841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.921082 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Idle.png
+  artifactKey: Guid(a6b94cbb745e8394cb1807f64eb9a2ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Idle.png using Guid(a6b94cbb745e8394cb1807f64eb9a2ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac31a8364c5aace2ff3daa0568473ba4') in 0.195304 seconds
+  Import took 0.341552 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.213671 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Hit.png
+  artifactKey: Guid(457b8d6c1871b3042ac282a236449a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Hit.png using Guid(457b8d6c1871b3042ac282a236449a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcb371410c513cf466656f727c335976') in 0.024914 seconds
+  Import took 0.038250 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.477735 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Hit.png
+  artifactKey: Guid(457b8d6c1871b3042ac282a236449a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Hit.png using Guid(457b8d6c1871b3042ac282a236449a44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abfad4f2d85ba6d7f19ec0e60ba8609') in 0.199139 seconds
+  Import took 0.222380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.507660 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Ready.png
+  artifactKey: Guid(c7f732cdd5eb22c40904dbceeb070ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Ready.png using Guid(c7f732cdd5eb22c40904dbceeb070ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c02fbb16d486b55f7e44a79e8e034b1c') in 0.033861 seconds
+  Import took 0.053610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.726272 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Ready.png
+  artifactKey: Guid(c7f732cdd5eb22c40904dbceeb070ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Ready.png using Guid(c7f732cdd5eb22c40904dbceeb070ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f68930595460eed3f2fcf536c858b9f2') in 0.245778 seconds
+  Import took 0.265727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.137747 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Idle.png
+  artifactKey: Guid(4b5eb63a84a020e4f9d84cefdfe17a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Idle.png using Guid(4b5eb63a84a020e4f9d84cefdfe17a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f3c933edd70057e887a311255f6f65f') in 0.041294 seconds
+  Import took 0.100511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.679645 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Idle.png
+  artifactKey: Guid(4b5eb63a84a020e4f9d84cefdfe17a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Battle_Idle.png using Guid(4b5eb63a84a020e4f9d84cefdfe17a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4532e86b1f98ea959a3598929159132d') in 0.054280 seconds
+  Import took 0.099200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.665596 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack.png
+  artifactKey: Guid(a712a17b488a7094a9eb4a6669613f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack.png using Guid(a712a17b488a7094a9eb4a6669613f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd129bf7b3b44561292bc16d277e941') in 0.048697 seconds
+  Import took 0.076535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.125742 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack.png
+  artifactKey: Guid(a712a17b488a7094a9eb4a6669613f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack.png using Guid(a712a17b488a7094a9eb4a6669613f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd129bf7b3b44561292bc16d277e941') in 0.011358 seconds
+  Import took 0.017860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 84.445131 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack.png
+  artifactKey: Guid(a712a17b488a7094a9eb4a6669613f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack.png using Guid(a712a17b488a7094a9eb4a6669613f0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee63a1a7c783750db44948c7fed34935') in 0.248826 seconds
+  Import took 0.362620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.504025 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack(effect).png
+  artifactKey: Guid(4f3ef8d862f08634ea8e8a417880ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack(effect).png using Guid(4f3ef8d862f08634ea8e8a417880ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a4fef746c263235f676d04963d1cb5') in 0.055560 seconds
+  Import took 0.095433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.118172 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack(effect).png
+  artifactKey: Guid(4f3ef8d862f08634ea8e8a417880ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack(effect).png using Guid(4f3ef8d862f08634ea8e8a417880ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a4fef746c263235f676d04963d1cb5') in 0.010768 seconds
+  Import took 0.017886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.834594 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack(effect).png
+  artifactKey: Guid(4f3ef8d862f08634ea8e8a417880ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Knight/Attack(effect).png using Guid(4f3ef8d862f08634ea8e8a417880ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '779155425b407b42d234fa34e6f33d94') in 0.130555 seconds
+  Import took 0.146166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5681.503219 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Sprites/Witch/Female_Witch_Battle_Run_nm.png
+  artifactKey: Guid(0c03680fc2407224bbe8dbbbb1477ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Sprites/Witch/Female_Witch_Battle_Run_nm.png using Guid(0c03680fc2407224bbe8dbbbb1477ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd42872b3d48750a6ef05ba00bb3735b5') in 0.397762 seconds
+  Import took 0.450065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3402.765279 seconds.
+  path: Assets/My Folders/99_Test/Witch (1).prefab
+  artifactKey: Guid(4b8cab08b6eb88644949205601ce7087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/99_Test/Witch (1).prefab using Guid(4b8cab08b6eb88644949205601ce7087) Importer(815301076,1909f56bfc062723c751e8b465ee728b) CommandBuffer: temporary render texture _CameraColorTexture not found while executing Pixelisation (Blit source)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs:391)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs:296)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs:251)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs line 391]
+
+CommandBuffer: temporary render texture _CameraColorTexture not found while executing PixelisationPostProcess (SetRenderTarget)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs:391)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs:296)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs:251)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/UniversalRenderPipeline.cs line 391]
+
+ -> (artifact id: 'c89a42593d07d23a7d51292ed7165ab8') in 0.985420 seconds
+  Import took 1.056955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 126.216573 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight
+  artifactKey: Guid(8e1252165c8bd254a91db361ee4cffec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight using Guid(8e1252165c8bd254a91db361ee4cffec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb87b9741d487221e9aa3578792505eb') in 0.027437 seconds
+  Import took 0.045267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.193523 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller
+  artifactKey: Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller using Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '294f8d2620817c312e5fad3897359b7f') in 0.020856 seconds
+  Import took 0.046028 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 680.752287 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Attack(effect)_0.controller
+  artifactKey: Guid(f8c3f13c4a71b364da26af759c6ade5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Attack(effect)_0.controller using Guid(f8c3f13c4a71b364da26af759c6ade5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af64ee1dec2ce345ef99e1f9a5f982ce') in 0.327636 seconds
+  Import took 0.361980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.060175 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Attack_Sword_Effect.anim
+  artifactKey: Guid(15d1df405ff65fb4eaa5b5c6fc039c9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Attack_Sword_Effect.anim using Guid(15d1df405ff65fb4eaa5b5c6fc039c9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1df5392c1b6cbaea3210e87ee0caca6') in 0.086359 seconds
+  Import took 0.116431 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002486 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ForwardRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.225 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2689 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.6 MB.
+System memory in use after: 140.1 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3282.
+Total: 6.029400 ms (FindLiveObjects: 0.379900 ms CreateObjectMapping: 0.175800 ms MarkObjects: 2.888100 ms  DeleteObjects: 2.583700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002793 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ForwardRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.119 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2689 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.8 MB.
+System memory in use after: 140.2 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3285.
+Total: 6.080600 ms (FindLiveObjects: 0.728100 ms CreateObjectMapping: 0.246600 ms MarkObjects: 3.379300 ms  DeleteObjects: 1.724500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 590.511522 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Battle_Run_LeftBottom.anim
+  artifactKey: Guid(5e0a87e2af341244dbd5abceb59134fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Battle_Run_LeftBottom.anim using Guid(5e0a87e2af341244dbd5abceb59134fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb392cf13a477165939c3cbdc8438376') in 0.129998 seconds
+  Import took 0.159586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.842159 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Battle_Run_0.controller
+  artifactKey: Guid(1d1c624832b6aa444af0e75119e0ef62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Battle_Run_0.controller using Guid(1d1c624832b6aa444af0e75119e0ef62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '223b0a62aa51a7233e21ddaa895c168a') in 0.128243 seconds
+  Import took 0.157478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1364.593620 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_LB.anim
+  artifactKey: Guid(168ed5387d9ba3c4abceb9a145725221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_LB.anim using Guid(168ed5387d9ba3c4abceb9a145725221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e55918138a2cf17daf5a6eb2cbc258') in 0.026938 seconds
+  Import took 0.033681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.984395 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0.anim
+  artifactKey: Guid(168ed5387d9ba3c4abceb9a145725221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0.anim using Guid(168ed5387d9ba3c4abceb9a145725221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d1210689e7df51f88c6b858139156a') in 0.016275 seconds
+  Import took 0.053506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.922476 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_1.anim
+  artifactKey: Guid(96c42d1ae489ea846b1c968f99af74c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_1.anim using Guid(96c42d1ae489ea846b1c968f99af74c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e2616c3fbb9ecb09595b10e59e68011') in 0.009409 seconds
+  Import took 0.132727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.398246 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim
+  artifactKey: Guid(f48a33da0206ce043874285af6532cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim using Guid(f48a33da0206ce043874285af6532cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2979a6f636550da3c1ff4ac3e00e65f8') in 0.101346 seconds
+  Import took 0.117644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.946251 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim
+  artifactKey: Guid(8190989aefde3b64da366b3fdea60a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim using Guid(8190989aefde3b64da366b3fdea60a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7728de1f673a2be167305c2a1f748f45') in 0.091199 seconds
+  Import took 0.118421 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.676648 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 1.anim
+  artifactKey: Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 1.anim using Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69eb7ea30a1baf3a138ac3ae2bd2e945') in 0.009509 seconds
+  Import took 0.031535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.918673 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 2.anim
+  artifactKey: Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 2.anim using Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e02cac4c77d719b3b9f43b530b995d') in 0.037269 seconds
+  Import took 0.043355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.366824 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 3.anim
+  artifactKey: Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 3.anim using Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a71df12188b63f11e359d85299b43af') in 0.027468 seconds
+  Import took 0.048376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.114623 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 1.anim
+  artifactKey: Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 1.anim using Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ff64a2142d60d3c5c0f809bd0067668') in 0.010940 seconds
+  Import took 0.037838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.501226 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_1.anim
+  artifactKey: Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_1.anim using Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bb894fb20d11a7994da17d98604a462') in 0.048483 seconds
+  Import took 0.099772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.025768 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 2.anim
+  artifactKey: Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 2.anim using Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a17b8f45516a174d491ba73fe132ceba') in 0.011635 seconds
+  Import took 0.024784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001050 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 2.anim
+  artifactKey: Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0 2.anim using Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a17b8f45516a174d491ba73fe132ceba') in 0.006802 seconds
+  Import took 0.013569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.155107 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim
+  artifactKey: Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim using Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bd41af59e5995c668c71b046d3d1fc1') in 0.008037 seconds
+  Import took 0.020784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.314649 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim
+  artifactKey: Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim using Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7765b5a19ddeb4ba199769908e2181c2') in 0.027912 seconds
+  Import took 0.033487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.378287 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0.anim
+  artifactKey: Guid(168ed5387d9ba3c4abceb9a145725221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_0.anim using Guid(168ed5387d9ba3c4abceb9a145725221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b06fa0947b3713c97281e33c8230114') in 0.006420 seconds
+  Import took 0.112080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.310738 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller
+  artifactKey: Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller using Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f88c6f0634d06ea1c367a19297133c9b') in 0.026630 seconds
+  Import took 0.049461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 255.076429 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_1.anim
+  artifactKey: Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_1.anim using Guid(5cdc2947c2d7a4c4a85381416ecf1805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '533d094dcbb032ca3597ddbe760e1e88') in 0.006406 seconds
+  Import took 0.108669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 125.556388 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim
+  artifactKey: Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim using Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c612ee4e785edb8027c5b51e51bf8c3') in 0.293960 seconds
+  Import took 0.339166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.379274 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim
+  artifactKey: Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim using Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e141ff2966f7eb9161a9d8a39036093') in 0.020792 seconds
+  Import took 0.052121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 85.850876 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim
+  artifactKey: Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_2.anim using Guid(f33944708459551459c2709d10929a3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed00642a10db90db94f1096b1e38744f') in 0.006010 seconds
+  Import took 0.011924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 161.593463 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim
+  artifactKey: Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/Knight/Knight_Battle_Run_3.anim using Guid(ff23a8e75b84b68419aec85d11d7b8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fbf93fdbd1404f3577bc2bf137769e5') in 0.006002 seconds
+  Import took 0.105595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2328.317188 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller
+  artifactKey: Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller using Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c75f5191ed2a0c32a322954751d47cd8') in 0.140229 seconds
+  Import took 0.173875 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006020 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ForwardRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.749 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2689 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.8 MB.
+System memory in use after: 140.3 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3288.
+Total: 10.119700 ms (FindLiveObjects: 0.822400 ms CreateObjectMapping: 0.467700 ms MarkObjects: 6.174700 ms  DeleteObjects: 2.651300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002738 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+ForwardRenderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:135)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs:59)
+
+(Filename: C:/Users/이용준/Desktop/QuickTest/Test/Library/PackageCache/com.unity.render-pipelines.universal@10.2.2/Runtime/ScriptableRendererData.cs Line: 135)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.054 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2689 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 141.7 MB.
+System memory in use after: 140.2 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 3291.
+Total: 6.345400 ms (FindLiveObjects: 0.475200 ms CreateObjectMapping: 0.195700 ms MarkObjects: 3.808500 ms  DeleteObjects: 1.864100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 3363.030919 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller
+  artifactKey: Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller using Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b6f10826bea0357deb8f8f3cdaadfc') in 0.023981 seconds
+  Import took 0.036634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.072085 seconds.
+  path: Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller
+  artifactKey: Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/My Folders/02_2DArts/Characters/Animations/KnightAnim.controller using Guid(fa4070f291c5f9c4fb7e4ace76fa0c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21b6f10826bea0357deb8f8f3cdaadfc') in 0.027393 seconds
+  Import took 0.033448 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
