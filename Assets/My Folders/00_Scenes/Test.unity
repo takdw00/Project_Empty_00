@@ -954,7 +954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814203912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.32, y: -0.952, z: -11.13}
+  m_LocalPosition: {x: -3.32, y: 0, z: -11.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1189,14 +1189,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.560877, b: 0.39215684, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1247,13 +1247,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194421589}
-  m_LocalRotation: {x: -0.09657246, y: 0.49529594, z: -0.40728432, w: -0.7612327}
-  m_LocalPosition: {x: -12.09, y: 17.04, z: 11.53}
+  m_LocalRotation: {x: -0.22371593, y: 0.27779493, z: -0.06669266, w: -0.93184406}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 33.4, y: -414, z: 38.914}
+  m_LocalEulerAnglesHint: {x: 27, y: 326.8, z: 0}
 --- !u!114 &1194421592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2748,6 +2748,7 @@ GameObject:
   - component: {fileID: 7510945815596615069}
   - component: {fileID: 7510945815596615059}
   - component: {fileID: 7510945815596615068}
+  - component: {fileID: 7510945815596615071}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -2755,6 +2756,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7510945815596615071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510945815596615070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497c22a7c5d21d44d8cc7a52e326f147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7510945816523065985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2767,7 +2780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7600844c5493d40a32c142d3c1080e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: Test Input Move
+  Description: Input Selector Child 2
   speedMultiply: 3
 --- !u!114 &7510945816523065986
 MonoBehaviour:
@@ -2799,7 +2812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMode: 0
   rootNodes:
-  - {fileID: 7510945816523065985}
+  - {fileID: 7510945816523066000}
   - {fileID: 7510945816523065986}
 --- !u!4 &7510945816523065996
 Transform:
@@ -2825,6 +2838,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7510945816523065996}
   - component: {fileID: 7510945816523065987}
+  - component: {fileID: 7510945816523066000}
+  - component: {fileID: 7510945816523065999}
+  - component: {fileID: 7510945816523065998}
   - component: {fileID: 7510945816523065985}
   - component: {fileID: 7510945816523065986}
   m_Layer: 0
@@ -2834,3 +2850,46 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7510945816523065998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510945816523065997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ca97e64c0183541860ad01f0e31d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: Input Selector Child 1
+--- !u!114 &7510945816523065999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510945816523065997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7fae1869501084428b82282481369ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: Input Selector Child 0
+--- !u!114 &7510945816523066000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510945816523065997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89473c007315db44bee010cc8b044df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: Test Input Root
+  children:
+  - {fileID: 7510945816523065999}
+  - {fileID: 7510945816523065998}
+  - {fileID: 7510945816523065985}

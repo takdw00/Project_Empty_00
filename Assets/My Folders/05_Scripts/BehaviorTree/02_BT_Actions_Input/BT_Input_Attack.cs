@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BTSystem
 {
-    public class BT_Input_Guard : BT_Node
+    public class BT_Input_Attack : BT_Node
     {
         private CharacterControl characterControl;
 
@@ -14,24 +14,33 @@ namespace BTSystem
             characterControl = transform.parent.GetComponent<CharacterControl>();
         }
 
-
         public override Result Execute()
         {
-            if (Input.GetMouseButton(1))
+            if (characterControl.IsAttacking)
             {
-                Vector3 dir = new Vector3(Input.GetAxisRaw("Horizontal"),0.0f,Input.GetAxisRaw("Vertical"));
-                characterControl.Guard(dir);
                 return Result.SUCCESS;
             }
             else 
             {
-                return Result.FAILURE;
+                if (Input.GetMouseButton(0))
+                {
+                    Vector3 dir = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
+                    characterControl.Attack(dir);
+                    return Result.SUCCESS;
+                }
+                else
+                {
+                    return Result.FAILURE;
+                }
             }
+
+
+            
         }
 
         public override void ResetNode()
         {
-            
+
         }
     }
 }

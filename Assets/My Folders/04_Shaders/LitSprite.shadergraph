@@ -126,20 +126,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "91eda06ac6d447f2b836e9babb1b6729"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "ca0f2a7cc9ad4ea49b34e8bdba07acfd"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "c35b38ab119b4bae861475605a6ef253"
                 },
                 "m_SlotId": 0
@@ -910,10 +896,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -436.7999572753906,
-            "y": 314.3999938964844,
-            "width": 124.79999542236328,
-            "height": 33.600006103515628
+            "x": -448.0000305175781,
+            "y": 328.0,
+            "width": 124.8000259399414,
+            "height": 34.399993896484378
         }
     },
     "m_Slots": [
@@ -944,10 +930,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -291.9999694824219,
-            "y": 294.3999938964844,
-            "width": 186.40000915527345,
-            "height": 249.6000213623047
+            "x": -292.0,
+            "y": 304.79998779296877,
+            "width": 187.20001220703126,
+            "height": 250.40003967285157
         }
     },
     "m_Slots": [
@@ -1365,7 +1351,7 @@
     "m_Name": "Normal",
     "m_DefaultReferenceName": "Texture2D_df99098c154a4b6e807656f849fbc024",
     "m_OverrideReferenceName": "_NormTex",
-    "m_GeneratePropertyBlock": false,
+    "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,

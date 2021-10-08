@@ -38,6 +38,42 @@ TextureImporter:
   - first:
       213: 6026814280090948545
     second: Attack(effect)_11
+  - first:
+      213: 3452159064421161303
+    second: Battle_Attack_Sword_Combo0_Effect_0
+  - first:
+      213: -2694955642487632569
+    second: Battle_Attack_Sword_Combo0_Effect_1
+  - first:
+      213: -5905573410511457325
+    second: Battle_Attack_Sword_Combo0_Effect_2
+  - first:
+      213: 8691563223651193458
+    second: Battle_Attack_Sword_Combo0_Effect_3
+  - first:
+      213: -5018406700745902813
+    second: Battle_Attack_Sword_Combo0_Effect_4
+  - first:
+      213: -7966220314820232764
+    second: Battle_Attack_Sword_Combo0_Effect_5
+  - first:
+      213: 8200798913185398992
+    second: Battle_Attack_Sword_Combo0_Effect_6
+  - first:
+      213: 1703142772390734405
+    second: Battle_Attack_Sword_Combo0_Effect_7
+  - first:
+      213: 3740698542071771989
+    second: Battle_Attack_Sword_Combo0_Effect_8
+  - first:
+      213: -3921591202837593442
+    second: Battle_Attack_Sword_Combo0_Effect_9
+  - first:
+      213: 9123794768870728320
+    second: Battle_Attack_Sword_Combo0_Effect_10
+  - first:
+      213: -5483511439570548548
+    second: Battle_Attack_Sword_Combo0_Effect_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -163,7 +199,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack(effect)_0
+      name: Battle_Attack_Sword_Combo0_Effect_0
       rect:
         serializedVersion: 2
         x: 0
@@ -171,20 +207,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 462f9e7392b7d6070800000000000000
-      internalID: 8101266721671344740
+      spriteID: 759d7f6f06888ef20800000000000000
+      internalID: 3452159064421161303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_1
+      name: Battle_Attack_Sword_Combo0_Effect_1
       rect:
         serializedVersion: 2
         x: 200
@@ -192,20 +228,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d6c37293fc0a6200800000000000000
-      internalID: 173965775880832722
+      spriteID: 74d07142f18999ad0800000000000000
+      internalID: -2694955642487632569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_2
+      name: Battle_Attack_Sword_Combo0_Effect_2
       rect:
         serializedVersion: 2
         x: 400
@@ -213,20 +249,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb7e27e18e5af9400800000000000000
-      internalID: 333167313810548671
+      spriteID: 3d3f87fa5403b0ea0800000000000000
+      internalID: -5905573410511457325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_3
+      name: Battle_Attack_Sword_Combo0_Effect_3
       rect:
         serializedVersion: 2
         x: 600
@@ -234,20 +270,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4f46bf27f07a1ab0800000000000000
-      internalID: -5036589026300768437
+      spriteID: 2721498b3b2ae9870800000000000000
+      internalID: 8691563223651193458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_4
+      name: Battle_Attack_Sword_Combo0_Effect_4
       rect:
         serializedVersion: 2
         x: 800
@@ -255,20 +291,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b8939c3e40d01060800000000000000
-      internalID: 6922261661710784691
+      spriteID: 325b99fb1b90b5ab0800000000000000
+      internalID: -5018406700745902813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_5
+      name: Battle_Attack_Sword_Combo0_Effect_5
       rect:
         serializedVersion: 2
         x: 1000
@@ -276,20 +312,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec9b0af14317ed580800000000000000
-      internalID: -8800472153152505394
+      spriteID: 4c9b3ac94dc427190800000000000000
+      internalID: -7966220314820232764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_6
+      name: Battle_Attack_Sword_Combo0_Effect_6
       rect:
         serializedVersion: 2
         x: 0
@@ -297,20 +333,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caa37aca7930df410800000000000000
-      internalID: 1512368999837940396
+      spriteID: 0d043de69271fc170800000000000000
+      internalID: 8200798913185398992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_7
+      name: Battle_Attack_Sword_Combo0_Effect_7
       rect:
         serializedVersion: 2
         x: 200
@@ -318,20 +354,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbc8e2f5eb384e690800000000000000
-      internalID: -7573783819666420545
+      spriteID: 54aaf1ee357c2a710800000000000000
+      internalID: 1703142772390734405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_8
+      name: Battle_Attack_Sword_Combo0_Effect_8
       rect:
         serializedVersion: 2
         x: 400
@@ -339,20 +375,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef1bd3fe59ce53e70800000000000000
-      internalID: 9094435151252664830
+      spriteID: 55372044181a9e330800000000000000
+      internalID: 3740698542071771989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_9
+      name: Battle_Attack_Sword_Combo0_Effect_9
       rect:
         serializedVersion: 2
         x: 600
@@ -360,20 +396,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7f733c0e1f034b0800000000000000
-      internalID: -5462600400350218276
+      spriteID: e9281981495b399c0800000000000000
+      internalID: -3921591202837593442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_10
+      name: Battle_Attack_Sword_Combo0_Effect_10
       rect:
         serializedVersion: 2
         x: 800
@@ -381,20 +417,20 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6947d7ed8e69e91d0800000000000000
-      internalID: -3342067946552986474
+      spriteID: 0826b1a900b3e9e70800000000000000
+      internalID: 9123794768870728320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack(effect)_11
+      name: Battle_Attack_Sword_Combo0_Effect_11
       rect:
         serializedVersion: 2
         x: 1000
@@ -402,14 +438,14 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 9
-      pivot: {x: 0.5, y: 0.24}
+      pivot: {x: 0.5, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c3921408ab83a350800000000000000
-      internalID: 6026814280090948545
+      spriteID: cb84b9a0667a6e3b0800000000000000
+      internalID: -5483511439570548548
       vertices: []
       indices: 
       edges: []

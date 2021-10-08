@@ -18,17 +18,23 @@ namespace BTSystem
         public override Result Execute()
         {
             bool inputIsWalk = Input.GetKey(KeyCode.LeftControl);
-            Vector3 inputDirection = new Vector3(Input.GetAxisRaw("Horizontal"),0f,Input.GetAxisRaw("Vertical")).normalized;
+            Vector3 dir = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
 
-            if (inputIsWalk)
+            if (Mathf.Approximately(dir.sqrMagnitude,0.0f))
             {
-                characterControl.Walk(inputDirection);
+                characterControl.Idle();
             }
             else 
             {
-                characterControl.Run(inputDirection);
+                if (inputIsWalk)
+                {
+                    characterControl.Walk(dir.normalized);
+                }
+                else
+                {
+                    characterControl.Run(dir.normalized);
+                }
             }
-            
 
             return Result.SUCCESS;
         }
