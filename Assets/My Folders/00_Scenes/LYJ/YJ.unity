@@ -1836,40 +1836,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 497
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 783b3a667a7b1434e89e8acf2c844e08, type: 3}
---- !u!1 &1483824820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1483824821}
-  m_Layer: 0
-  m_Name: PartyManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1483824821
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483824820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.838579, y: 4.57518, z: -18.647623}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
     - target: {fileID: 4439557634583574626, guid: 5766f70b600902147b5a05c0a03a7b51, type: 3}
       propertyPath: m_RootOrder
       value: 459
@@ -2222,7 +2188,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 783b3a667a7b1434e89e8acf2c844e08, type: 3}
->>>>>>> a33580130c98f81bb6038a4af6144c7f4fe6d32b
 --- !u!1 &1544001952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,60 +3482,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7049e7a752ce7f44b2917a8e361add2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character_Name: 
-  experience:
-    character_Experience: 0
-    exp_Vigor: 0
-    exp_Endurance: 0
-    exp_Attunement: 0
-    exp_Strength: 0
-    exp_Intelligence: 0
-    exp_Dexterity: 0
-    exp_Luck: 0
-    exp_Charisma: 0
-  abilityStats:
-    vigor: 0
-    endurance: 0
-    attunement: 0
-    strength: 0
-    intelligence: 0
-    dexterity: 0
-    luck: 0
-    charisma: 0
   battleStats:
-    health_Point: 0
-    stamina_Point: 0
-    mind_Point: 0
-    maximum_Weight: 0
-    move_Speed: 0
-    physical_Attack_Power: 0
-    magic_Attack_Power: 0
-    physical_Defense_Power: 0
-    magic_Defense_Power: 0
-    critical_Rate: 0
-    critical_Attack_Resistance: 0
-    block: 0
-    attack_Width_Range: 0
-    attack_Length_Range: 0
-    sight: 0
     walkSpeed: 0
     runSpeed: 0
   adjustedBattleStats:
-    health_Point: 0
-    stamina_Point: 0
-    mind_Point: 0
-    maximum_Weight: 0
-    move_Speed: 0
-    physical_Attack_Power: 0
-    magic_Attack_Power: 0
-    physical_Defense_Power: 0
-    magic_Defense_Power: 0
-    critical_Rate: 0
-    critical_Attack_Resistance: 0
-    block: 0
-    attack_Width_Range: 0
-    attack_Length_Range: 0
-    sight: 0
     walkSpeed: 2
     runSpeed: 5
 --- !u!114 &7510945815017321359
@@ -3599,7 +3514,6 @@ GameObject:
   - component: {fileID: 7510945815017321354}
   - component: {fileID: 7510945815017321359}
   - component: {fileID: 7510945815017321358}
-  - component: {fileID: 7510945815017321397}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -3607,18 +3521,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7510945815017321397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7510945815017321396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69d3b6af407cc364fb546e8672bcefb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &7510945815596615059
 SpriteRenderer:
   m_ObjectHideFlags: 0
