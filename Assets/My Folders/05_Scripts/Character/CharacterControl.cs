@@ -4,8 +4,16 @@ using UnityEngine;
 using UnityEngine.AI;
 using BTSystem;
 
+
+
+// 캐릭터의 움직임에 관한 함수들을 정의
+// 애니메이터를 움직이는 작업도 모두 여기서 진행
+// BT에서 이 캐릭터컨트롤에 명령을 주어 캐릭터를 조작하도록 함
+// 애니메이션에서 사용하는 애니메이션 이벤트 함수도 이 클래스 내 일부 함수들을 이용하도록 함
+
 public class CharacterControl : MonoBehaviour
 {
+    //애니메이터에서 사용하는 Anim 파라미터에 넣어주면 해당 애니메이션 재상
     public enum AnimIndex 
     {
         IDLE = 0,
