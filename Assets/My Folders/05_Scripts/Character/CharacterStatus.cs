@@ -40,8 +40,6 @@ public struct AbilityStats
     public float dexterity; //기량
     public float luck; //운
     public float charisma; //매력
-
-
 }
 
 [System.Serializable]

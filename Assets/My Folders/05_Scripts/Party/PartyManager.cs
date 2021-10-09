@@ -5,6 +5,8 @@ using BTSystem;
 
 public class PartyManager : MonoBehaviour
 {
+    GameObject characters;
+    
     /*
          PartyManager
         -파티에 소속된 캐릭터들을 가지고 있음
