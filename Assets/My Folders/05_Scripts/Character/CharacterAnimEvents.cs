@@ -15,4 +15,9 @@ public class CharacterAnimEvents : MonoBehaviour
     {
         characterControl.OnAttackEnd();
     }
+
+    public void Test(int a) 
+    {
+
+    }
 }
