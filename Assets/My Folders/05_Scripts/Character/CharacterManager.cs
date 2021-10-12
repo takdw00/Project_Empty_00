@@ -29,8 +29,6 @@ public class CharacterManager : MonoBehaviour
 
 
     #region Properties
-    //당장은 공개 여부에 관해서 확실히 정할 수 가 없는 상태이다.
-    //이후에 필요에 따라 변수를 공개해서 사용하도록 함.
     //in Character Object
     private CapsuleCollider CharacterCollider { get { return characterCollider; } set { characterCollider = value; } }
     private Rigidbody CharacterRigidnody { get { return characterRigidnody; } set { characterRigidnody = value; } }
@@ -43,7 +41,7 @@ public class CharacterManager : MonoBehaviour
     private CharacterAnimEvents CharacterAnimEvents { get { return characterAnimEvents; } set { characterAnimEvents = value; } }
 
     //in BT Object 
-    public BehaviorTree BehaviorTree { get { return behaviorTree; } set { behaviorTree = value; } }
+    private BehaviorTree BehaviorTree { get { return behaviorTree; } set { behaviorTree = value; } }
     #endregion
 
     private void Awake()
