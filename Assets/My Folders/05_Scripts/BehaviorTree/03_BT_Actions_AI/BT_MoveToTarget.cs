@@ -51,6 +51,7 @@ namespace BTSystem
                 }
             }
 
+            characterControl.SetNavMeshMoveAnim();
             return Result.RUNNING;
         }
 

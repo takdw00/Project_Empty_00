@@ -20,7 +20,8 @@ public class CharacterControl : MonoBehaviour
         WALK,
         RUN,
         GUARD,
-        ATTACK
+        ATTACK,
+        READY
     }
 
     //Components Cache
@@ -36,11 +37,17 @@ public class CharacterControl : MonoBehaviour
     public Vector3 CurrentDirection { get { return currentDirection; } }
     protected bool isFacingRight;
 
+
+
     //Attack Variable
     private float timeSinceAttackEnd;
     private int nextAttackCombo;
     private bool isAttacking;
     public bool IsAttacking { get { return isAttacking; } }
+
+    //Ready Variable
+    public float readyToIdleTime = 5.0f;
+    private float currentReadyTime;
 
 
     protected virtual void Awake()
@@ -55,12 +62,13 @@ public class CharacterControl : MonoBehaviour
 
     protected virtual void Start() 
     {
-
+        currentReadyTime = readyToIdleTime;
     }
 
     protected virtual void Update()
     {
         ComboAttackTimeUpdate();
+        ReadyTimeUpdate();
     }
 
     #region Character Actions
@@ -98,10 +106,22 @@ public class CharacterControl : MonoBehaviour
     }
 
 
-    //가만히 서 있는 동작을 수행합니다.
+    //가만히 서 있는 동작을 수행합니다. 전투 준비 동작도 함께 검사합니다.
     public void Idle() 
     {
-        animator.SetInteger("Anim", (int)AnimIndex.IDLE);
+        if (currentReadyTime >= readyToIdleTime)
+        {
+            animator.SetInteger("Anim", (int)AnimIndex.IDLE);
+        }
+        else 
+        {
+            animator.SetInteger("Anim", (int)AnimIndex.READY);
+        }
+    }
+
+    private void ReadyTimeUpdate() 
+    {
+        currentReadyTime += Time.deltaTime;
     }
 
     //Move
@@ -135,8 +155,7 @@ public class CharacterControl : MonoBehaviour
         {
             navAgent.speed = status.adjustedBattleStats.runSpeed;
             navAgent.isStopped = false;
-            SetDirection(navAgent.desiredVelocity.normalized);
-            animator.SetInteger("Anim", (int)AnimIndex.RUN);
+            SetNavMeshMoveAnim();
             return true;
         }
 
@@ -148,6 +167,12 @@ public class CharacterControl : MonoBehaviour
     {
         navAgent.isStopped = true;
         animator.SetInteger("Anim", (int)AnimIndex.IDLE);
+    }
+
+    public void SetNavMeshMoveAnim() 
+    {
+        SetDirection(navAgent.desiredVelocity.normalized);
+        animator.SetInteger("Anim", (int)AnimIndex.RUN);
     }
 
     //공격은 각 파생 클래스마다 다르게 구현합니다. 테스트를 위해 기본형은 기사의 소드 공격입니다.
@@ -166,6 +191,7 @@ public class CharacterControl : MonoBehaviour
         }
     }
 
+    //공격 모션 종료 직전 콜백(다른 액션의 선입력을 받을 수 있는 상태)
     public void OnAttackEnding() 
     {
 
@@ -178,6 +204,7 @@ public class CharacterControl : MonoBehaviour
         //nextAttackCombo++;
         timeSinceAttackEnd = 0.0f;
         isAttacking = false;
+        currentReadyTime = 0.0f;
     }
 
     //공격 후
@@ -202,6 +229,7 @@ public class CharacterControl : MonoBehaviour
             SetDirection(dir.normalized);
         }
         animator.SetInteger("Anim", (int)AnimIndex.GUARD);
+        currentReadyTime = 0.0f;
     }
 
     //패리

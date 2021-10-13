@@ -199,7 +199,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Battle_Guard_0
+      name: Battle_Ready_0
       rect:
         serializedVersion: 2
         x: 0
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 201122dea664103e0800000000000000
-      internalID: -2089311327064289022
+      spriteID: 9e0fb4e62ee6a7e00800000000000000
+      internalID: 1043268182481826025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_1
+      name: Battle_Ready_1
       rect:
         serializedVersion: 2
         x: 128
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cba73e3318670a60800000000000000
-      internalID: 7640189724714838983
+      spriteID: fd6e2e8d20f5183a0800000000000000
+      internalID: -6664941507698301217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_2
+      name: Battle_Ready_2
       rect:
         serializedVersion: 2
         x: 256
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f38722965e77a6230800000000000000
-      internalID: 3632847876622809151
+      spriteID: 1981bcd5ca96d7560800000000000000
+      internalID: 7313117558948436113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_3
+      name: Battle_Ready_3
       rect:
         serializedVersion: 2
         x: 384
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9509ef0a62ffc21e0800000000000000
-      internalID: -2221119974825619367
+      spriteID: 53575b08ec3e0bcd0800000000000000
+      internalID: -2544283313402186443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_4
+      name: Battle_Ready_4
       rect:
         serializedVersion: 2
         x: 512
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 098772092b77ea3b0800000000000000
-      internalID: -5499326486166407024
+      spriteID: 6e1c0af079b590fc0800000000000000
+      internalID: -3528188128707690010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_5
+      name: Battle_Ready_5
       rect:
         serializedVersion: 2
         x: 640
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1781516e4e1897820800000000000000
-      internalID: 2916505053811775601
+      spriteID: 67a777cde054c9830800000000000000
+      internalID: 4079211292621503094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_6
+      name: Battle_Ready_6
       rect:
         serializedVersion: 2
         x: 0
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32d80c63dbee73290800000000000000
-      internalID: -7910591724018168541
+      spriteID: 93393dcc886c9ae80800000000000000
+      internalID: -8166778158405414087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_7
+      name: Battle_Ready_7
       rect:
         serializedVersion: 2
         x: 128
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 777512be287f1f760800000000000000
-      internalID: 7490039796956485495
+      spriteID: 0d66216509bd98260800000000000000
+      internalID: 7100447700492117712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_8
+      name: Battle_Ready_8
       rect:
         serializedVersion: 2
         x: 256
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97c13ef0c6f6a46f0800000000000000
-      internalID: -699624282188997511
+      spriteID: 25c60f0df253a9100800000000000000
+      internalID: 115463219936521298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_9
+      name: Battle_Ready_9
       rect:
         serializedVersion: 2
         x: 384
@@ -402,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5330bfab02d5bde40800000000000000
-      internalID: 5682237750015361845
+      spriteID: 6691d97cfa3ff3ba0800000000000000
+      internalID: -6106894633397315226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_10
+      name: Battle_Ready_10
       rect:
         serializedVersion: 2
         x: 512
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd6311515b0bf7040800000000000000
-      internalID: 4647627632258660059
+      spriteID: 2d20a1798b60a5820800000000000000
+      internalID: 2907643899299889874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Battle_Guard_11
+      name: Battle_Ready_11
       rect:
         serializedVersion: 2
         x: 640
@@ -444,8 +444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea177a120d8b752a0800000000000000
-      internalID: -6748722312534068818
+      spriteID: 425e622be642a6d70800000000000000
+      internalID: 9037075660126217508
       vertices: []
       indices: 
       edges: []
