@@ -16,8 +16,6 @@ namespace BTSystem
     {
         [SerializeField] [Tooltip("단순 표시용")] private BehaviorMode currentMode;
         [SerializeField] private BT_Node[] rootNodes;
-
-        public Dictionary<string, object> Blackboard { get; set; }
         
         private bool isBehaviorStarted;
         private int currentBehaviorIndex;
