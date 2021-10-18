@@ -16,19 +16,26 @@ namespace BTSystem
     {
         [SerializeField] [Tooltip("단순 표시용")] private BehaviorMode currentMode;
         [SerializeField] private BT_Node[] rootNodes;
+
+        // AI별 개인 블랙보드
+        private CharacterBlackboard blackboard;
+        public CharacterBlackboard Blackboard { get { return blackboard; } private set { blackboard = value; } }
         
         private bool isBehaviorStarted;
         private int currentBehaviorIndex;
 
-        private void Awake()
+        private void InitBlackboard() 
         {
-            isBehaviorStarted = false;
-            currentBehaviorIndex = 1;
+            Blackboard.characterControl = transform.parent.GetComponent<CharacterControl>();
         }
 
-        private void Start()
+        private void Awake()
         {
-            StartBehavior(BehaviorMode.STANDARD);
+            Blackboard = new CharacterBlackboard();
+            InitBlackboard();
+
+            isBehaviorStarted = false;
+            currentBehaviorIndex = 1;
         }
 
         private void Update()

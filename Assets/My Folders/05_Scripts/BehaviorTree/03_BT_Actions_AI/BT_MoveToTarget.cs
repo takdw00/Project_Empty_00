@@ -7,24 +7,26 @@ namespace BTSystem
 {
     public class BT_MoveToTarget : BT_Node
     {
-        public Transform target;
-        private CharacterControl characterControl;
-
         protected override void Awake()
         {
             base.Awake();
-            characterControl = transform.parent.GetComponent<CharacterControl>();
-
         }
 
         public override Result Execute()
         {
-            return characterControl.MoveByNavmesh(target.position);
+            if (BT.Blackboard.followTarget == null)
+            {
+                return Result.FAILURE;
+            }
+            else 
+            {
+                return BT.Blackboard.characterControl.MoveByNavmesh(BT.Blackboard.followTarget.position + BT.Blackboard.followTargetOffset);
+            }
         }
 
         public override void ResetNode()
         {
-            characterControl.StopNavMeshMove();
+            BT.Blackboard.characterControl.StopNavMeshMove();
         }
     }
 }

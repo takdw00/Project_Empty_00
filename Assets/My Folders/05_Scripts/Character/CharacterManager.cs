@@ -15,7 +15,7 @@ public class CharacterManager : MonoBehaviour
 
     //in Character Object
     CapsuleCollider characterCollider;
-    Rigidbody characterRigidnody;
+    NavMeshAgent characterNavAgent;
     CharacterControl characterControl;
     CharacterStatus characterStatus;
 
@@ -31,7 +31,7 @@ public class CharacterManager : MonoBehaviour
     #region Properties
     //in Character Object
     private CapsuleCollider CharacterCollider { get { return characterCollider; } set { characterCollider = value; } }
-    private Rigidbody CharacterRigidnody { get { return characterRigidnody; } set { characterRigidnody = value; } }
+    public NavMeshAgent CharacterNavAgent { get { return characterNavAgent; } private set { characterNavAgent = value; } }
     private CharacterControl CharacterControl { get { return characterControl; } set { characterControl = value; } }
     private CharacterStatus CharacterStatus { get { return characterStatus; } set { characterStatus = value; } }
 
@@ -41,7 +41,7 @@ public class CharacterManager : MonoBehaviour
     private CharacterAnimEvents CharacterAnimEvents { get { return characterAnimEvents; } set { characterAnimEvents = value; } }
 
     //in BT Object 
-    private BehaviorTree BehaviorTree { get { return behaviorTree; } set { behaviorTree = value; } }
+    public BehaviorTree BehaviorTree { get { return behaviorTree; } private set { behaviorTree = value; } }
     #endregion
 
     private void Awake()
@@ -50,7 +50,7 @@ public class CharacterManager : MonoBehaviour
         try
         {
             characterCollider = GetComponent<CapsuleCollider>();
-            characterRigidnody = GetComponent<Rigidbody>();
+            characterNavAgent = GetComponent<NavMeshAgent>();
             characterControl = GetComponent<CharacterControl>();
             characterStatus = GetComponent<CharacterStatus>();
         }

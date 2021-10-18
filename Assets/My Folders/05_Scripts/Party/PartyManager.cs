@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BTSystem;
 
-public class PartyManager : MonoBehaviour
+public class PartyManager : Singleton<PartyManager>
 {
-    GameObject characters;
-    
     /*
          PartyManager
         -파티에 소속된 캐릭터들을 가지고 있음
@@ -25,38 +23,63 @@ public class PartyManager : MonoBehaviour
 
      */
 
+    public CharacterManager[] partyMembers;
 
-    // 이후에 CharacterManager 클래스를 만들어서 그 클래스로 캐릭터 관련 스크립트 접근 가능하도록 만들 것
-    [SerializeField] GameObject partyMember_0;
-    [SerializeField] GameObject partyMember_1;
-    [SerializeField] GameObject partyMember_2;
-    [SerializeField] GameObject partyMember_3;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        ChangePlayerCharacter(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    //지정한 인덱스의 파티 멤버를 플레이어가 되도록 교체
+    public void ChangePlayerCharacter(int memberIndex) 
     {
-        
+        for (int i = 0; i < 4; i++)
+        {
+            if (partyMembers[i] == null) 
+            {
+                continue;
+            }
+
+            if (i == memberIndex)
+            {
+                GlobalBlackboard.Instance.playerTransform = partyMembers[i].transform;
+                partyMembers[i].BehaviorTree.StartBehavior(BehaviorMode.INPUT);
+                partyMembers[i].CharacterNavAgent.avoidancePriority = 49;
+            }
+            else 
+            {
+                partyMembers[i].BehaviorTree.StartBehavior(BehaviorMode.STANDARD);
+                partyMembers[i].CharacterNavAgent.avoidancePriority = 50;
+            }
+        }
     }
 
     #region Inspector Test
 
-    /*이후에 입력 받는 매개변수 partyMember 는 UI창의 버튼 등에서 정보를 가져와 함수를 실행하도록 한다. */
-    [ContextMenu("StartMode_Input")]
-    void ConvertInputBehavior(GameObject partyMember)
+    [ContextMenu("SetPartyMember0ToPlayer")]
+    public void SetPartyMember0ToPlayer() 
     {
-        partyMember.transform.Find("BT").GetComponent<BehaviorTree>().StartBehavior(BehaviorMode.INPUT);
+        ChangePlayerCharacter(0);
     }
-    [ContextMenu("StartMode_Standard")]
-    void ConvertStandardBehavior(GameObject partyMember)
+
+    [ContextMenu("SetPartyMember1ToPlayer")]
+    public void SetPartyMember1ToPlayer()
     {
-        partyMember.transform.Find("BT").GetComponent<BehaviorTree>().StartBehavior(BehaviorMode.STANDARD);
+        ChangePlayerCharacter(1);
     }
+
+    [ContextMenu("SetPartyMember2ToPlayer")]
+    public void SetPartyMember2ToPlayer()
+    {
+        ChangePlayerCharacter(2);
+    }
+
+    [ContextMenu("SetPartyMember3ToPlayer")]
+    public void SetPartyMember3ToPlayer()
+    {
+        ChangePlayerCharacter(3);
+    }
+
     #endregion
 
 }
