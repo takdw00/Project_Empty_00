@@ -20,9 +20,9 @@ namespace BTSystem
             bool inputIsWalk = Input.GetKey(KeyCode.LeftControl);
             Vector3 dir = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
 
-            if (Mathf.Approximately(dir.sqrMagnitude,0.0f))
+            if (Mathf.Approximately(dir.sqrMagnitude, 0.0f))
             {
-                characterControl.Idle();
+                characterControl.IdleMotionUpdate();
             }
             else 
             {

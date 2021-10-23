@@ -38,8 +38,6 @@ public class CharacterControl : MonoBehaviour
     public Vector3 CurrentDirection { get { return currentDirection; } }
     protected bool isFacingRight;
 
-
-
     //Attack Variable
     private float timeSinceAttackEnd;
     private int nextAttackCombo;
@@ -106,14 +104,14 @@ public class CharacterControl : MonoBehaviour
     }
 
 
-    //가만히 서 있는 동작을 수행합니다. 전투 준비 동작도 함께 검사합니다.
-    public void Idle() 
+    //주로 움직이는 로직에서 움직이고 있지 않다면 IDLE 또는 READY를 애니메이션으로 출력합니다.
+    public void IdleMotionUpdate() 
     {
         if (currentReadyTime >= readyToIdleTime)
         {
             animator.SetInteger("Anim", (int)AnimIndex.IDLE);
         }
-        else 
+        else
         {
             animator.SetInteger("Anim", (int)AnimIndex.READY);
         }
@@ -184,6 +182,7 @@ public class CharacterControl : MonoBehaviour
                     if (navAgent.remainingDistance <= navAgent.stoppingDistance) 
                     {
                         StopNavMeshMove();
+                        IdleMotionUpdate();
                         Debug.Log("새 패스를 계산했는데 정상이고 도착했어요.");
                         return Result.SUCCESS;
                     }
@@ -197,6 +196,7 @@ public class CharacterControl : MonoBehaviour
                 case NavMeshPathStatus.PathPartial:
                 case NavMeshPathStatus.PathInvalid:
                     StopNavMeshMove();
+                    IdleMotionUpdate();
                     Debug.Log("새 패스를 계산했는데 갈 수 없는 비정상이라 멈췄어요.");
                     return Result.FAILURE;
             }
@@ -212,6 +212,7 @@ public class CharacterControl : MonoBehaviour
                     if (navAgent.remainingDistance <= navAgent.stoppingDistance)
                     {
                         StopNavMeshMove();
+                        IdleMotionUpdate();
                         Debug.Log("기존 패스를 검사했는데 정상이고 도착했어요.");
                         return Result.SUCCESS;
                     }
@@ -225,6 +226,7 @@ public class CharacterControl : MonoBehaviour
                 case NavMeshPathStatus.PathInvalid:
                     Debug.Log("기존 패스를 검사했는데 비정상이 되서 멈췄어요.");
                     StopNavMeshMove();
+                    IdleMotionUpdate();
                     return Result.FAILURE;
             }
         }
