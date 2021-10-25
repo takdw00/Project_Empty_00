@@ -6,7 +6,6 @@ namespace BTSystem
 {
     public class BT_Input_Move : BT_Node
     {
-        [Tooltip("캐릭터 이동 속도에 이 값을 곱해 적용됩니다.")] public float speedMultiply;
         private CharacterControl characterControl;
 
         protected override void Awake()
@@ -22,7 +21,7 @@ namespace BTSystem
 
             if (Mathf.Approximately(dir.sqrMagnitude, 0.0f))
             {
-                characterControl.IdleMotionUpdate();
+                characterControl.IdleAndMoveMotionUpdate();
             }
             else 
             {

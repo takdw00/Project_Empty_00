@@ -45,6 +45,8 @@ public class PartyManager : Singleton<PartyManager>
                 GlobalBlackboard.Instance.playerTransform = partyMembers[i].transform;
                 partyMembers[i].BehaviorTree.StartBehavior(BehaviorMode.INPUT);
                 partyMembers[i].CharacterNavAgent.avoidancePriority = 49;
+                CameraManager cam = FindObjectOfType<CameraManager>();
+                cam.targetTransform = partyMembers[i].transform;
             }
             else 
             {

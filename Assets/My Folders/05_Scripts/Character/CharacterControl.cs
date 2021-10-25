@@ -44,9 +44,12 @@ public class CharacterControl : MonoBehaviour
     private bool isAttacking;
     public bool IsAttacking { get { return isAttacking; } }
 
-    //Ready Variable
+    //IdleAndMove Variable
     public float readyToIdleTime = 5.0f;
     private float currentReadyTime;
+    private float lastTimeIdleMotionUpdated;//AI 이동 시 애니메이션 업데이트 주기에 제한을 둡니다.
+    private float lastTimeIdleMotionDirUpdated;
+    private AnimIndex currentNavmeshMoveMotion;
 
 
     protected virtual void Awake()
@@ -72,48 +75,103 @@ public class CharacterControl : MonoBehaviour
     #region Character Actions
     //캐릭터 액션의 대부분 동작들은 애니메이터 파라미터 조정까지 담당합니다.
 
-    //Direction을 조정하고 애니메이터의 Direction 파라미터를 갱신합니다.
-    protected void SetDirection(Vector3 dir) 
+    //방향에 따른 Direction 파라미터의 기댓값을 얻습니다.
+    public int CalculateDirection(Vector3 dir) 
     {
-        currentDirection = dir;
+        bool right = isFacingRight;
 
         //반대 방향으로 방향을 전환할 때에만 플립합니다. 예를 들어, 위나 아래로만 이동하면 기존 방향을 유지합니다.
         if (isFacingRight && currentDirection.x < -0.1f)
         {
-            isFacingRight = false;
+            right = false;
         }
-        else if(!isFacingRight && currentDirection.x > 0.1f)
+        else if (!isFacingRight && currentDirection.x > 0.1f)
         {
-            isFacingRight = true;
+            right = true;
         }
 
         //애니메이션에서 사용할 방향을 지정합니다.
         int dirIndex;
-        if (currentDirection.z > 0.1f)
+        if (dir.z > 0.1f)
         {
-            dirIndex = isFacingRight ? 3 : 2;
-        }
-        else 
-        {
-            dirIndex = isFacingRight ? 1 : 0;
-        }
-
-
-        animator.SetInteger("Direction", dirIndex);
-
-    }
-
-
-    //주로 움직이는 로직에서 움직이고 있지 않다면 IDLE 또는 READY를 애니메이션으로 출력합니다.
-    public void IdleMotionUpdate() 
-    {
-        if (currentReadyTime >= readyToIdleTime)
-        {
-            animator.SetInteger("Anim", (int)AnimIndex.IDLE);
+            dirIndex = right ? 3 : 2;
         }
         else
         {
-            animator.SetInteger("Anim", (int)AnimIndex.READY);
+            dirIndex = right ? 1 : 0;
+        }
+
+        return dirIndex;
+    }
+
+    //Direction을 조정하고 애니메이터의 Direction 파라미터를 갱신합니다.
+    protected void SetDirection(Vector3 dir) 
+    {
+        currentDirection = dir;
+        int dirIndex = CalculateDirection(dir);
+
+        if (dirIndex == 1 || dirIndex == 3)
+        {
+            isFacingRight = true;
+        }
+        else 
+        {
+            isFacingRight = false;
+        }
+
+        animator.SetInteger("Direction", dirIndex);
+    }
+
+
+    //주로 무브 로직에서 움직이고 있지 않다면 IDLE 또는 READY를 골라 애니메이션으로 출력하는 역할을 합니다.
+    //정지 또는 작은 이동에 대한 애니메이션 처리를 할 수 있습니다. 정지되어 있더라도 navAgent에 의해 속도가 변화하면 그것에 맞춰 이동 처리가 이루어집니다.
+    //네브메쉬를 통해 이동하는 캐릭터의 애니메이션 처리 결과가 됩니다.
+    public void IdleAndMoveMotionUpdate() 
+    {
+        float speedSqr = Vector3.SqrMagnitude(navAgent.velocity);
+        float moveSpeed = status.adjustedBattleStats.move_Speed;
+        float walkSpeed = moveSpeed * status.adjustedBattleStats.walkSpeedRatio;
+        float runSpeed = moveSpeed * status.adjustedBattleStats.runSpeedRatio;
+        float walkRunBoundSpeed = (walkSpeed + runSpeed) / 2.0f;
+
+
+        if (speedSqr < 0.01f)
+        {
+            currentNavmeshMoveMotion = AnimIndex.IDLE;
+
+            if (currentReadyTime >= readyToIdleTime)
+            {
+                animator.SetInteger("Anim", (int)AnimIndex.IDLE);
+            }
+            else
+            {
+                animator.SetInteger("Anim", (int)AnimIndex.READY);
+            }
+        }
+        else 
+        {
+            if (Time.time >= lastTimeIdleMotionUpdated + 0.2f)
+            {
+                if (speedSqr < walkRunBoundSpeed * walkRunBoundSpeed && currentNavmeshMoveMotion != AnimIndex.WALK)
+                {
+                    lastTimeIdleMotionUpdated = Time.time;
+                    currentNavmeshMoveMotion = AnimIndex.WALK;
+                    animator.SetInteger("Anim", (int)AnimIndex.WALK);
+
+                }
+                else if(currentNavmeshMoveMotion != AnimIndex.RUN)
+                {
+                    lastTimeIdleMotionUpdated = Time.time;
+                    currentNavmeshMoveMotion = AnimIndex.RUN;
+                    animator.SetInteger("Anim", (int)AnimIndex.RUN);
+                }
+            }
+
+            if (Time.time >= lastTimeIdleMotionDirUpdated + 0.2f) 
+            {
+                lastTimeIdleMotionDirUpdated = Time.time;
+                SetDirection(navAgent.velocity);
+            }
         }
     }
 
@@ -127,22 +185,21 @@ public class CharacterControl : MonoBehaviour
     private void Move(Vector3 dir, float speed)
     {
         navAgent.isStopped = true;
-        Vector3 moveVelocity = dir * speed * Time.deltaTime;
-        navAgent.Move(moveVelocity);
-        SetDirection(dir);
+        navAgent.velocity = (dir * speed);
     }
 
     //지정 방향으로 캐릭터의 걷기 속도로 이동합니다.
     public void Walk(Vector3 dir) 
     {
-        Move(dir, status.adjustedBattleStats.walkSpeed);
+        Move(dir, status.adjustedBattleStats.move_Speed * status.adjustedBattleStats.walkSpeedRatio);
+        SetDirection(dir);
         animator.SetInteger("Anim", (int)AnimIndex.WALK);
     }
 
     //지정 방향으로 캐릭터의 달리기 속도로 이동합니다.
     public void Run(Vector3 dir) 
     {
-        Move(dir, status.adjustedBattleStats.runSpeed);
+        Move(dir, status.adjustedBattleStats.move_Speed * status.adjustedBattleStats.runSpeedRatio);
         SetDirection(dir);
         animator.SetInteger("Anim", (int)AnimIndex.RUN);
     }
@@ -151,7 +208,7 @@ public class CharacterControl : MonoBehaviour
     //지금은 Run과 내용이 같으며, 스태미나 소모, 이동속도 처리, 애니메이션 가속 등을 나중에 구현해야 합니다.
     public void Sprint(Vector3 dir) 
     {
-        Move(dir, status.adjustedBattleStats.runSpeed);
+        Move(dir, status.adjustedBattleStats.move_Speed * status.adjustedBattleStats.sprintSpeedRatio);
         SetDirection(dir);
         animator.SetInteger("Anim", (int)AnimIndex.RUN);
     }
@@ -182,13 +239,13 @@ public class CharacterControl : MonoBehaviour
                     if (navAgent.remainingDistance <= navAgent.stoppingDistance) 
                     {
                         StopNavMeshMove();
-                        IdleMotionUpdate();
+                        IdleAndMoveMotionUpdate();
                         Debug.Log("새 패스를 계산했는데 정상이고 도착했어요.");
                         return Result.SUCCESS;
                     }
-                    navAgent.speed = status.adjustedBattleStats.runSpeed;
+                    navAgent.speed = status.adjustedBattleStats.move_Speed * status.adjustedBattleStats.runSpeedRatio;
                     navAgent.isStopped = false;
-                    SetNavMeshMoveAnim();
+                    IdleAndMoveMotionUpdate();
                     Debug.Log("새 패스를 계산했는데 정상이고 이동 중이에요.");
                     return Result.RUNNING;
 
@@ -196,7 +253,7 @@ public class CharacterControl : MonoBehaviour
                 case NavMeshPathStatus.PathPartial:
                 case NavMeshPathStatus.PathInvalid:
                     StopNavMeshMove();
-                    IdleMotionUpdate();
+                    IdleAndMoveMotionUpdate();
                     Debug.Log("새 패스를 계산했는데 갈 수 없는 비정상이라 멈췄어요.");
                     return Result.FAILURE;
             }
@@ -212,13 +269,13 @@ public class CharacterControl : MonoBehaviour
                     if (navAgent.remainingDistance <= navAgent.stoppingDistance)
                     {
                         StopNavMeshMove();
-                        IdleMotionUpdate();
+                        IdleAndMoveMotionUpdate();
                         Debug.Log("기존 패스를 검사했는데 정상이고 도착했어요.");
                         return Result.SUCCESS;
                     }
                     else 
                     {
-                        SetNavMeshMoveAnim();
+                        IdleAndMoveMotionUpdate();
                         Debug.Log("기존 패스를 검사했는데 정상이고 이동 중이에요.");
                         return Result.RUNNING;
                     }
@@ -226,7 +283,7 @@ public class CharacterControl : MonoBehaviour
                 case NavMeshPathStatus.PathInvalid:
                     Debug.Log("기존 패스를 검사했는데 비정상이 되서 멈췄어요.");
                     StopNavMeshMove();
-                    IdleMotionUpdate();
+                    IdleAndMoveMotionUpdate();
                     return Result.FAILURE;
             }
         }
@@ -240,13 +297,6 @@ public class CharacterControl : MonoBehaviour
         navAgent.destination = transform.position;
         navAgent.ResetPath();
         navAgent.isStopped = true;
-        animator.SetInteger("Anim", (int)AnimIndex.IDLE);
-    }
-
-    public void SetNavMeshMoveAnim() 
-    {
-        SetDirection(navAgent.desiredVelocity.normalized);
-        animator.SetInteger("Anim", (int)AnimIndex.RUN);
     }
 
     //공격은 각 파생 클래스마다 다르게 구현합니다. 테스트를 위해 기본형은 기사의 소드 공격입니다.

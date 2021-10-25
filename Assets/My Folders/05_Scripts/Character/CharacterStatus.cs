@@ -66,7 +66,8 @@ public struct BattleStats
 
 
     //test
-    public float walkSpeed;
-    public float runSpeed;
+    public float walkSpeedRatio;
+    public float runSpeedRatio;
+    public float sprintSpeedRatio;
     //
 } 

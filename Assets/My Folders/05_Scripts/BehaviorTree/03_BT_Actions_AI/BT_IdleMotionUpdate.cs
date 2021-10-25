@@ -8,7 +8,7 @@ namespace BTSystem
     {
         public override Result Execute()
         {
-            BT.Blackboard.characterControl.IdleMotionUpdate();
+            BT.Blackboard.characterControl.IdleAndMoveMotionUpdate();
             return Result.SUCCESS;
         }
 

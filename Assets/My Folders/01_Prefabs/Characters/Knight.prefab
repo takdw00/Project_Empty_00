@@ -261,14 +261,15 @@ MonoBehaviour:
     attack_Width_Range: 0
     attack_Length_Range: 0
     sight: 0
-    walkSpeed: 0
-    runSpeed: 0
+    walkSpeedRatio: 0
+    runSpeedRatio: 0
+    sprintSpeedRatio: 0
   adjustedBattleStats:
     health_Point: 0
     stamina_Point: 0
     mind_Point: 0
     maximum_Weight: 0
-    move_Speed: 0
+    move_Speed: 3
     physical_Attack_Power: 0
     magic_Attack_Power: 0
     physical_Defense_Power: 0
@@ -279,8 +280,9 @@ MonoBehaviour:
     attack_Width_Range: 0
     attack_Length_Range: 0
     sight: 0
-    walkSpeed: 1.5
-    runSpeed: 4
+    walkSpeedRatio: 0.5
+    runSpeedRatio: 1
+    sprintSpeedRatio: 1.5
 --- !u!1 &6614768705211629097
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +300,7 @@ GameObject:
   - component: {fileID: 6614768705211629104}
   - component: {fileID: 6614768705211629111}
   - component: {fileID: 6614768705211629110}
+  - component: {fileID: 8931534002557257237}
   - component: {fileID: 6614768705211629106}
   - component: {fileID: 6614768705211629105}
   - component: {fileID: 6614768705211629109}
@@ -395,7 +398,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: '[Input Selector] Child 2'
-  speedMultiply: 1
 --- !u!114 &6614768705211629104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,9 +442,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: "[Standard Root] Child1\n[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801]"
   children:
+  - {fileID: 8931534002557257237}
   - {fileID: 6614768705211629106}
   - {fileID: 6614768705211629109}
   - {fileID: 6614768705211629094}
+--- !u!114 &8931534002557257237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3234f01c4e5350348aea84fbd21e4cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child0\n\uD50C\uB808\uC774\uC5B4
+    \uCD94\uC801 \uC9C4\uD589 \uC911\uC5D0\uB294 \uC5B8\uC81C\uB098 \uC560\uB2C8\uBA54\uC774\uC158
+    \uCC98\uB9AC\uB97C \uC9C4\uD589\uD569\uB2C8\uB2E4."
 --- !u!114 &6614768705211629106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cff61be8a48d94e9046d5cf5e197a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child0\n[\uD50C\uB808\uC774\uC5B4
+  Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child1\n[\uD50C\uB808\uC774\uC5B4
     \uC778\uADFC \uC5EC\uBD80 \uC778\uBC84\uD130]\n\uD50C\uB808\uC774\uC5B4\uAC00
     \uC606\uC5D0 \uC5C6\uC73C\uBA74 SUCCESS\uC785\uB2C8\uB2E4."
   child: {fileID: 6614768705211629105}
@@ -488,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86557d5c867986428c7f64b1fa1f317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child1\n\uD314\uB85C\uC6B0
+  Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child2\n\uD314\uB85C\uC6B0
     \uD0C0\uAC9F\uC744 \uD50C\uB808\uC774\uC5B4\uB85C \uC124\uC815\uD558\uACE0,"
 --- !u!114 &6614768705211629094
 MonoBehaviour:
@@ -502,5 +520,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014153dfebaef2743bacd80e65ef5c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child2\n\uD314\uB85C\uC6B0
+  Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child3\n\uD314\uB85C\uC6B0
     \uD0C0\uAC9F\uC744 \uD5A5\uD574 \uC774\uB3D9\uD569\uB2C8\uB2E4."
