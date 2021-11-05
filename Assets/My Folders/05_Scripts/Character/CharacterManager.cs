@@ -11,7 +11,7 @@ public class CharacterManager : MonoBehaviour
     /// 다른 외부 스크립트에서의 접근을 위한 스크립트
     /// </summary>
 
-
+    
 
     //in Character Object
     CapsuleCollider characterCollider;

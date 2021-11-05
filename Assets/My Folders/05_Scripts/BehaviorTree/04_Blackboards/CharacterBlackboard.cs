@@ -10,11 +10,13 @@ namespace BTSystem
     // 컴포넌트 형태가 아닙니다. MonoBehavior를 상속받지 않는 일반 클래스 형태입니다.
     public class CharacterBlackboard
     {
+        
         // Component Cache
         // BehaviorTree의 InitBlackboard함수를 이용해 캐시합니다.
         public CharacterControl characterControl;
 
         // Data
+        public CampType CampIndex; //적대, 우호를 판별하는 진영의 의미로 캠프라는 단어를 사용하였음.
         public Transform followTarget;// 따라갈 타겟을 나타냅니다.
         public Vector3 followTargetOffset; // 일반적으로 따라갈 위치는 followTarget.position이지만 정확히 그 지점은 아닐 수도 있습니다.
     }

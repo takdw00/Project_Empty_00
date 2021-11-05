@@ -6,12 +6,12 @@ namespace BTSystem
 {
     public class BT_Input_Guard : BT_Node
     {
-        private CharacterControl characterControl;
+        private ICharacterControl_Guardable characterControl;
 
         protected override void Awake()
         {
             base.Awake();
-            characterControl = transform.parent.GetComponent<CharacterControl>();
+            characterControl = transform.parent.GetComponent<CharacterControl>() as ICharacterControl_Guardable;
         }
 
 
