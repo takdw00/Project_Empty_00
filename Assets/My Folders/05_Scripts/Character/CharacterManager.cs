@@ -33,7 +33,7 @@ public class CharacterManager : MonoBehaviour
     private CapsuleCollider CharacterCollider { get { return characterCollider; } set { characterCollider = value; } }
     public NavMeshAgent CharacterNavAgent { get { return characterNavAgent; } private set { characterNavAgent = value; } }
     private CharacterControl CharacterControl { get { return characterControl; } set { characterControl = value; } }
-    private CharacterStatus CharacterStatus { get { return characterStatus; } set { characterStatus = value; } }
+    public CharacterStatus CharacterStatus { get { return characterStatus; } set { characterStatus = value; } }
 
     //in Graphics Object
     private SpriteRenderer SpriteRenderer { get { return spriteRenderer; } set { spriteRenderer = value; } }

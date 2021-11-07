@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class CharacterControl_Monster : CharacterControl
 {
+    protected override void Start()
+    {
+        base.Start();
+        gameObject.GetComponentInChildren<BTSystem.BehaviorTree>().StartStandardBehavior();
+    }
+
     public override int GetDirectionIndex(Vector3 dir)
     {
         bool right = lastFacedRight;

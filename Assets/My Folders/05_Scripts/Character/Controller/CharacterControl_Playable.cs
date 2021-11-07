@@ -8,6 +8,10 @@ using UnityEngine;
 
 public class CharacterControl_Playable : CharacterControl, ICharacterControl_Dodgeable
 {
+    //동작 확인 변수
+    protected bool isDodging;
+    public bool IsDodging { get { return isDodging; } }
+
     //IdleAndMove Variable
     public float battleReadyToIdleTime = 5.0f;
     protected float currentBattleReadyTime;
@@ -93,17 +97,29 @@ public class CharacterControl_Playable : CharacterControl, ICharacterControl_Dod
 
     public virtual void Dodge(Vector3 dir) 
     {
+        if (!isDodging)
+        {
+            if (!Mathf.Approximately(Vector3.SqrMagnitude(dir), 0.0f))
+            {
+                SetDirection(dir.normalized);
+            }
 
+            animator.SetInteger("Anim", (int)AnimIndex_Basic.DODGE);
+            animator.SetTrigger("Dodge");
+            isDodging = true;
+        }
     }
 
-    public override void OnAttackEnd()
-    {
-        base.OnAttackEnd();
-        OnActionEnd();
-    }
     protected override void OnActionEnd()
     {
         base.OnActionEnd();
         ResetReadyTime();
+    }
+
+    //그래픽 오브젝트의 애니메이션 이벤트로 등록해야 함
+    public virtual void OnDodgeEnd() 
+    {
+        OnActionEnd();
+        isDodging = false;
     }
 }

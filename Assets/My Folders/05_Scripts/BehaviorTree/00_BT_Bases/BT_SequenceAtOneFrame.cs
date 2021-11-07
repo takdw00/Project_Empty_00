@@ -20,7 +20,7 @@ namespace BTSystem
                 }
 
                 Result result = children[i].Execute();
-                Debug.Log("[" + children[i].GetType() + "] Executed : " + result.ToString());
+                Debug.Log("[" + children[i].GetType() + "](" + children[i].DebugText + ") Executed : " + result.ToString());
 
                 if (result == Result.RUNNING)
                 {

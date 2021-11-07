@@ -9,7 +9,7 @@ namespace BTSystem
     {
         public override Result Execute()
         {
-            return Result.SUCCESS;
+            return BT.Blackboard.characterControl.CheckInterrupted() ? Result.SUCCESS : Result.FAILURE;
         }
 
         public override void ResetNode()

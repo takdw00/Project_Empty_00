@@ -10,6 +10,7 @@ public class CharacterStatus : MonoBehaviour
     [SerializeField] protected string character_Name; //캐릭터 이름
 
     [SerializeField] protected CampType camp; //캐릭터 진영, 초기값 설정 시 그대로 적용
+    public CampType Camp { get { return camp; } }
 
     public BattleStats battleStats;
     public BattleStats adjustedBattleStats;
@@ -22,7 +23,10 @@ public class CharacterStatus : MonoBehaviour
     public float MP { get { return health_Point; } }
 
     //이벤트 리스트(이곳에 접근해서 추가하고자 하는 메소드 추가)
-    public UnityEventFloat OnHPIncreased;
+    public UnityEventFloat OnDamaged; //최종적으로 받은 데미지를 매개변수로
+    public UnityEventFloat OnGroggyDamaged;
+    public UnityEvent OnDeath;
+    public UnityEventFloat OnHPIncreased; //최종적으로 증가한 체력량을 매개변수로
     public UnityEventFloat OnSPIncreased;
     public UnityEventFloat OnMPIncreased;
     public UnityEventFloat OnHPDecreased;
@@ -71,6 +75,47 @@ public class CharacterStatus : MonoBehaviour
     public void AddMP(float amount) 
     {
         AddPoint(amount, ref mind_Point, adjustedBattleStats.max_mind_Point, OnMPIncreased, OnMPDecreased);
+    }
+
+    //데미지 계산 공식에 의해 받을 데미지를 결정
+    protected float CalculateDamage(float damage) 
+    {
+        float result = damage;
+        return result;
+    }
+
+    protected float CalculateGroggyDamage(float damage) 
+    {
+        float result = damage;
+        return result;
+    }
+
+    //데미지와 그로기 데미지를 동시에 받음
+    public void TakeHitDamage(float damage, float groggyDamage) 
+    {
+        TakeDamage(damage);
+        TakeGroggyDamage(groggyDamage);
+    }
+
+    //데미지 받기 명령(수치적으로. 피격 모션 처리는 다른 곳에서.)
+    public void TakeDamage(float damage) 
+    {
+        float resultDamage = CalculateDamage(damage);
+
+        OnDamaged.Invoke(resultDamage);
+    }
+
+    //기절 데미지 받기 명령
+    public void TakeGroggyDamage(float damage)
+    {
+        float resultDamage = CalculateDamage(damage);
+
+        OnGroggyDamaged.Invoke(resultDamage);
+    }
+
+    public void Death() 
+    {
+        OnDeath.Invoke();
     }
 
     //캠프를 변경하고자 할 때 이 함수를 사용

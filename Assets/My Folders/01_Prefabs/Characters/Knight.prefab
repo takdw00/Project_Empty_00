@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6614768704536572217}
   - component: {fileID: 6614768704536572215}
   - component: {fileID: 6614768704536572216}
-  - component: {fileID: 6614768704536572219}
+  - component: {fileID: 622402174107160011}
   m_Layer: 7
   m_Name: Graphics
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6614768704536572219
+--- !u!114 &622402174107160011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6614768704536572218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 497c22a7c5d21d44d8cc7a52e326f147, type: 3}
+  m_Script: {fileID: 11500000, guid: 00e66233200654c4499c5b594b0c9c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Event_OnActionEnding:
@@ -122,8 +122,38 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5510997599936847974}
-        m_TargetAssemblyTypeName: CharacterControl_Playable, Assembly-CSharp
+        m_TargetAssemblyTypeName: CharacterControl, Assembly-CSharp
         m_MethodName: OnAttackEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Event_OnHitEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5510997599936847974}
+        m_TargetAssemblyTypeName: CharacterControl, Assembly-CSharp
+        m_MethodName: OnHitEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Event_OnDodgeEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5510997599936847974}
+        m_TargetAssemblyTypeName: CharacterControl_Playable, Assembly-CSharp
+        m_MethodName: OnDodgeEnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -147,6 +177,7 @@ GameObject:
   - component: {fileID: 6614768704779601681}
   - component: {fileID: 5510997599936847974}
   - component: {fileID: 6614768704779601706}
+  - component: {fileID: 8987214090381079275}
   m_Layer: 7
   m_Name: Knight
   m_TagString: Untagged
@@ -245,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character_Name: 
+  camp: 0
   battleStats:
     max_health_Point: 0
     max_stamina_Point: 0
@@ -277,6 +309,27 @@ MonoBehaviour:
     walkSpeedRatio: 0.5
     runSpeedRatio: 1
     sprintSpeedRatio: 1.5
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGroggyDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5510997599936847974}
+        m_TargetAssemblyTypeName: CharacterControl, Assembly-CSharp
+        m_MethodName: AnimateDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHPIncreased:
     m_PersistentCalls:
       m_Calls: []
@@ -295,6 +348,51 @@ MonoBehaviour:
   OnMPDecreased:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8987214090381079275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768704779601680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c20cbd2d7238f546a9bf3dc4f67fe24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnWeakHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNormalHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5510997599936847974}
+        m_TargetAssemblyTypeName: CharacterControl, Assembly-CSharp
+        m_MethodName: TakeHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6614768704779601706}
+        m_TargetAssemblyTypeName: CharacterStatus, Assembly-CSharp
+        m_MethodName: TakeHitDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnStrongHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6614768705211629097
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,8 +407,15 @@ GameObject:
   - component: {fileID: 6614768705211629099}
   - component: {fileID: 6614768705211629098}
   - component: {fileID: 6614768705211629093}
+  - component: {fileID: 8595486465596866111}
+  - component: {fileID: 8287516114112618928}
+  - component: {fileID: 5328940923385267568}
   - component: {fileID: 6614768705211629104}
+  - component: {fileID: 8973559586639744552}
   - component: {fileID: 6614768705211629111}
+  - component: {fileID: 825041213891184435}
+  - component: {fileID: 7242941807413392671}
+  - component: {fileID: 8250128383312951526}
   - component: {fileID: 6614768705211629110}
   - component: {fileID: 8931534002557257237}
   - component: {fileID: 6614768705211629106}
@@ -367,6 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: '[Input Selector]'
+  DebugText: 
   children:
   - {fileID: 6614768705211629099}
   - {fileID: 6614768705211629098}
@@ -384,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: '[Input Selector] Child 0'
+  DebugText: 
 --- !u!114 &6614768705211629098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: '[Input Selector] Child 1'
+  DebugText: 
 --- !u!114 &6614768705211629093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,6 +518,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: '[Input Selector] Child 2'
+  DebugText: 
+--- !u!114 &8595486465596866111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c455288ea24b4b43a15d5d46f9b86d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "[\uAC15\uC81C \uBC29\uD574 \uAC80\uC0AC]\n\uBC29\uD574\uBC1B\uC9C0
+    \uC54A\uC544\uC57C \uD310\uB2E8 \uB85C\uC9C1\uC744 \uC2DC\uC791\uD569\uB2C8\uB2E4."
+  DebugText: 
+  child: {fileID: 6614768705211629104}
+  conditionNode: {fileID: 8287516114112618928}
+--- !u!114 &8287516114112618928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22cff61be8a48d94e9046d5cf5e197a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "\uBC29\uD574 \uC5EC\uBD80 \uAC70\uC9D3\uC77C \uC2DC \uC131\uACF5
+    \uBC18\uD658"
+  DebugText: 
+  child: {fileID: 5328940923385267568}
+--- !u!114 &5328940923385267568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b36424cb853ed4080b2c2f5fc9c97c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "\uBC29\uD574 \uC5EC\uBD80 \uD310\uB2E8"
+  DebugText: 
 --- !u!114 &6614768705211629104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,9 +579,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: '[Standard Root]'
+  DebugText: 
+  children:
+  - {fileID: 8973559586639744552}
+  - {fileID: 6614768705211629110}
+--- !u!114 &8973559586639744552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6924ea7d7317144ab4019d4583285b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "[Standard Root] Child0\n[\uADFC\uCC98 \uC801\uC744 \uCC3E\uC544 \uC774\uB3D9\uD558\uC5EC
+    \uACF5\uACA9]"
+  DebugText: 
   children:
   - {fileID: 6614768705211629111}
-  - {fileID: 6614768705211629110}
+  - {fileID: 825041213891184435}
+  - {fileID: 7242941807413392671}
+  - {fileID: 8250128383312951526}
 --- !u!114 &6614768705211629111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,8 +615,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7e781ecc1669a439e92e5128021c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Description: "[Standard Root] Child0\n\uC801\uC774 \uADFC\uCC98\uC5D0 \uC788\uB294\uC9C0
-    \uD655\uC778\uD569\uB2C8\uB2E4."
+  Description: "[\uADFC\uCC98 \uC801\uC744 \uCC3E\uC544 \uC774\uB3D9\uD558\uC5EC
+    \uACF5\uACA9] Child0\n\uC801\uC774 \uADFC\uCC98\uC5D0 \uC788\uB294\uC9C0 \uD655\uC778\uD558\uACE0
+    \uADF8 \uBAA9\uB85D\uC744 \uD655\uBCF4\uD569\uB2C8\uB2E4."
+  DebugText: 
+  recognitionDistance: 10
+--- !u!114 &825041213891184435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5268c01f34b204748bac65d17843f35e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "[\uADFC\uCC98 \uC801\uC744 \uCC3E\uC544 \uC774\uB3D9\uD558\uC5EC
+    \uACF5\uACA9] Child1\n\uD0C0\uAC9F\uC73C\uB85C \uD560 \uC801\uC744 \uC120\uD0DD\uD558\uC5EC
+    \uCD94\uC801 \uD0C0\uAE43\uC73C\uB85C \uC124\uC815\uD569\uB2C8\uB2E4."
+  DebugText: 
+  attackRange: 1
+--- !u!114 &7242941807413392671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014153dfebaef2743bacd80e65ef5c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "[\uADFC\uCC98 \uC801\uC744 \uCC3E\uC544 \uC774\uB3D9\uD558\uC5EC
+    \uACF5\uACA9] Child2\n\uC124\uC815\uD55C \uC801\uC744 \uD5A5\uD574 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+  DebugText: 
+--- !u!114 &8250128383312951526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6614768705211629097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d13d55eab62f4b459e5d735aa899eed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Description: "[\uADFC\uCC98 \uC801\uC744 \uCC3E\uC544 \uC774\uB3D9\uD558\uC5EC
+    \uACF5\uACA9] Child3\n\uC801\uC744 \uD5A5\uD574 \uACF5\uACA9\uD569\uB2C8\uB2E4."
+  DebugText: 
+  attackRange: 1
 --- !u!114 &6614768705211629110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Description: "[Standard Root] Child1\n[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801]"
+  DebugText: 
   children:
   - {fileID: 8931534002557257237}
   - {fileID: 6614768705211629106}
@@ -473,6 +702,7 @@ MonoBehaviour:
   Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child0\n\uD50C\uB808\uC774\uC5B4
     \uCD94\uC801 \uC9C4\uD589 \uC911\uC5D0\uB294 \uC5B8\uC81C\uB098 \uC560\uB2C8\uBA54\uC774\uC158
     \uCC98\uB9AC\uB97C \uC9C4\uD589\uD569\uB2C8\uB2E4."
+  DebugText: 
 --- !u!114 &6614768705211629106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +718,7 @@ MonoBehaviour:
   Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child1\n[\uD50C\uB808\uC774\uC5B4
     \uC778\uADFC \uC5EC\uBD80 \uC778\uBC84\uD130]\n\uD50C\uB808\uC774\uC5B4\uAC00
     \uC606\uC5D0 \uC5C6\uC73C\uBA74 SUCCESS\uC785\uB2C8\uB2E4."
+  DebugText: 
   child: {fileID: 6614768705211629105}
 --- !u!114 &6614768705211629105
 MonoBehaviour:
@@ -505,6 +736,7 @@ MonoBehaviour:
     child\n\uD50C\uB808\uC774\uC5B4 \uC606\uC5D0 \uC704\uCE58\uD574\uC788\uB294\uC9C0
     \uD655\uC778\uD569\uB2C8\uB2E4. \uC778\uBC84\uD130 \uC790\uC2DD\uC774\uB2C8 \uACB0\uACFC\uAC00
     \uBC18\uB300\uB85C \uB418\uACA0\uC8E0?"
+  DebugText: 
   distance: 3
 --- !u!114 &6614768705211629109
 MonoBehaviour:
@@ -520,6 +752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child2\n\uD314\uB85C\uC6B0
     \uD0C0\uAC9F\uC744 \uD50C\uB808\uC774\uC5B4\uB85C \uC124\uC815\uD558\uACE0,"
+  DebugText: 
 --- !u!114 &6614768705211629094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,3 +767,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: "[\uD50C\uB808\uC774\uC5B4 \uCD94\uC801] Child3\n\uD314\uB85C\uC6B0
     \uD0C0\uAC9F\uC744 \uD5A5\uD574 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+  DebugText: 

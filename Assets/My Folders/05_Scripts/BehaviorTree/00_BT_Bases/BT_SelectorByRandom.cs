@@ -85,7 +85,7 @@ namespace BTSystem
             {
                 SelectByRandom();
                 result = children[currentChildIndex].Execute();
-                Debug.Log("[" + children[currentChildIndex].GetType() + "] Executed : " + result.ToString());
+                Debug.Log("[" + children[currentChildIndex].GetType() + "](" + children[currentChildIndex].DebugText + ") Executed : " + result.ToString());
                 childrenInfo[currentChildIndex].isExecuted = true;
 
                 if (result == Result.RUNNING)

@@ -7,7 +7,7 @@ namespace BTSystem
         public override Result Execute()
         {
             Result result = child.Execute();
-            Debug.Log("[" + child.GetType() + "] Executed : " + result.ToString());
+            Debug.Log("[" + child.GetType() + "](" + child.DebugText + ") Executed : " + result.ToString());
 
             if (result != Result.RUNNING) 
             {

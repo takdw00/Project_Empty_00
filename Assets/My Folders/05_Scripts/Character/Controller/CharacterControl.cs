@@ -25,7 +25,8 @@ public class CharacterControl : MonoBehaviour
         ATTACK = 4,
         READY = 5,
         HIT = 6,
-        DEATH = 7
+        DEATH = 7,
+        DODGE = 8
     }
 
     //Components Cache
@@ -34,7 +35,7 @@ public class CharacterControl : MonoBehaviour
 
     //캐릭터 정보 컴포넌트
     protected CharacterStatus status;
-    
+
     //캐릭터가 바라보는 방향 저장
     protected Vector3 lastFacingDirection; //캐릭터가 마지막으로 이동하거나 바라봤던 방향. 360도 전방위 가능한 방향이다.
     protected bool lastFacedRight; //캐릭터가 마지막으로 바라보는 방향이 좌인지 우인지 저장한 방향이다.(currentDirection으로는 추출이 불가하기 때문)
@@ -80,8 +81,17 @@ public class CharacterControl : MonoBehaviour
     [SerializeField] protected int maxComboAttackCount = 1;
     protected float timeSinceAttackEnd;
     protected int nextAttackCombo;
+
+
+    //동작 확인 변수 저장
     protected bool isAttacking;
+    protected bool isHit;
+    protected bool isGroggy;
+    protected bool isDead;
     public bool IsAttacking { get { return isAttacking; } }
+    public bool IsHit { get { return isHit; } }
+    public bool IsGroggy { get { return isGroggy; } }
+    public bool IsDead { get { return isDead; } }
 
     protected virtual void Awake()
     {
@@ -90,23 +100,23 @@ public class CharacterControl : MonoBehaviour
         status = GetComponent<CharacterStatus>();
     }
 
-    protected virtual void Start() 
+    protected virtual void Start()
     {
-        
+
     }
 
     protected virtual void Update()
     {
-        
+
     }
 
 
     #region Character Actions
     //캐릭터 액션의 대부분 동작들은 애니메이터 파라미터 조정까지 담당합니다.
-    
+
 
     //지정한 방향으로 Direction을 조정하고 애니메이터의 Direction 파라미터를 갱신합니다.
-    protected virtual void SetDirection(Vector3 dir) 
+    protected virtual void SetDirection(Vector3 dir)
     {
         lastFacingDirection = dir;
 
@@ -116,7 +126,7 @@ public class CharacterControl : MonoBehaviour
         {
             lastFacedRight = true;
         }
-        else 
+        else
         {
             lastFacedRight = false;
         }
@@ -127,7 +137,7 @@ public class CharacterControl : MonoBehaviour
 
     //정지 또는 작은 이동에 대한 애니메이션 처리를 할 수 있습니다. 정지되어 있더라도 navAgent에 의해 속도가 변화하면 그것에 맞춰 이동 처리가 이루어집니다.
     //네브메쉬를 통해 이동하는 캐릭터의 애니메이션 처리 결과가 됩니다.
-    public virtual void NavMeshMoveMotionUpdate() 
+    public virtual void NavMeshMoveMotionUpdate()
     {
         float currentNavAgentSpeedSqr = Vector3.SqrMagnitude(navAgent.velocity);
         float moveSpeed = status.adjustedBattleStats.move_Speed;
@@ -140,9 +150,9 @@ public class CharacterControl : MonoBehaviour
         {
             lastNavMeshMoveMotion = AnimIndex_Basic.IDLE;
             animator.SetInteger("Anim", (int)AnimIndex_Basic.IDLE);
-            
+
         }
-        else 
+        else
         {
             if (Time.time >= lastTimeNavmeshMoveMotionUpdated + 0.2f)
             {
@@ -170,7 +180,7 @@ public class CharacterControl : MonoBehaviour
         }
     }
 
-    
+
 
     //인풋으로 이동하는 논리입니다.
     protected void Move(Vector3 dir, float speed)
@@ -180,7 +190,7 @@ public class CharacterControl : MonoBehaviour
     }
 
     //지정 방향으로 캐릭터의 걷기 속도로 이동합니다.
-    public void Walk(Vector3 dir) 
+    public void Walk(Vector3 dir)
     {
         Move(dir, status.adjustedBattleStats.move_Speed * status.adjustedBattleStats.walkSpeedRatio);
         SetDirection(dir);
@@ -188,7 +198,7 @@ public class CharacterControl : MonoBehaviour
     }
 
     //지정 방향으로 캐릭터의 달리기 속도로 이동합니다.
-    public void Run(Vector3 dir) 
+    public void Run(Vector3 dir)
     {
         Move(dir, status.adjustedBattleStats.move_Speed * status.adjustedBattleStats.runSpeedRatio);
         SetDirection(dir);
@@ -197,7 +207,7 @@ public class CharacterControl : MonoBehaviour
 
     //지정 방향으로 캐릭터의 전력질주 속도로 이동합니다.
     //지금은 Run과 내용이 같으며, 스태미나 소모, 이동속도 처리, 애니메이션 가속 등을 나중에 구현해야 합니다.
-    public void Sprint(Vector3 dir) 
+    public void Sprint(Vector3 dir)
     {
         Move(dir, status.adjustedBattleStats.move_Speed * status.adjustedBattleStats.sprintSpeedRatio);
         SetDirection(dir);
@@ -227,7 +237,7 @@ public class CharacterControl : MonoBehaviour
                 //도달할 수 있는 정상적인 패스라면 에이전트가 새로운 패스로 따라가게 함
                 case NavMeshPathStatus.PathComplete:
                     navAgent.SetPath(path);
-                    if (navAgent.remainingDistance <= navAgent.stoppingDistance) 
+                    if (navAgent.remainingDistance <= navAgent.stoppingDistance)
                     {
                         //새 패스 정상. 도착 완료.
                         StopNavMeshMove();
@@ -264,7 +274,7 @@ public class CharacterControl : MonoBehaviour
                         NavMeshMoveMotionUpdate();
                         return Result.SUCCESS;
                     }
-                    else 
+                    else
                     {
                         //기존 패스 정상. 이동 중.
                         NavMeshMoveMotionUpdate();
@@ -290,16 +300,16 @@ public class CharacterControl : MonoBehaviour
         navAgent.isStopped = true;
     }
 
-    //액션이 종료된 시점에 발생할 애니메이션 이벤트로 넣어줄 내용
-    protected virtual void OnActionEnd() 
+    //액션이 종료된 시점에 발생할 애니메이션 이벤트와 함께 발생(다른 애니메이션 이벤트에 의해 간접 호출)
+    protected virtual void OnActionEnd()
     {
         animator.SetInteger("Anim", (int)AnimIndex_Basic.IDLE);
     }
 
     //공격은 각 파생 클래스마다 다르게 구현합니다. 테스트를 위해 기본형은 기사의 소드 공격입니다.
-    public virtual void Attack(Vector3 dir) 
+    public virtual void Attack(Vector3 dir)
     {
-        if (!isAttacking) 
+        if (!isAttacking)
         {
             if (!Mathf.Approximately(Vector3.SqrMagnitude(dir), 0.0f))
             {
@@ -312,8 +322,80 @@ public class CharacterControl : MonoBehaviour
         }
     }
 
+    protected void UpdateToNextComboAttack()
+    {
+        if (nextAttackCombo + 1 >= maxComboAttackCount)
+        {
+            nextAttackCombo = 0;
+        }
+        else
+        {
+            nextAttackCombo++;
+        }
+    }
+
+    //공격 후
+    protected void ComboAttackTimeUpdate()
+    {
+        if (!isAttacking)
+        {
+            timeSinceAttackEnd += Time.deltaTime;
+        }
+        if (timeSinceAttackEnd >= 0.2f)
+        {
+            timeSinceAttackEnd = 0.0f;
+            nextAttackCombo = 0;
+        }
+    }
+
+    //강제적 행동 방해를 위한 준비 단계입니다.
+    protected virtual void ForceInterrupt()
+    {
+        isAttacking = false;
+        isHit = false;
+        isGroggy = false;
+
+        timeSinceAttackEnd = 0.0f;
+        nextAttackCombo = 0;
+    }
+
+    //강제 방해받았는지 여부를 조사하여 반환
+    public virtual bool CheckInterrupted()
+    {
+        if (
+            isHit ||
+            isGroggy
+            )
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+    }
+
+    public virtual void TakeHit() 
+    {
+        ForceInterrupt();
+        isHit = true;
+        animator.SetInteger("Anim", (int)AnimIndex_Basic.HIT);
+        animator.SetTrigger("Hit");
+    }
+
+    //직접 호출하지 말고, Status에서 Dead를 호출할 것
+    public virtual void AnimateDeath() 
+    {
+        ForceInterrupt();
+        isDead = true;
+        animator.SetInteger("Anim", (int)AnimIndex_Basic.DEATH);
+        animator.SetTrigger("Death");
+    }
+
+    #endregion
+
     //공격 모션 종료 시 애니메이션 이벤트 콜백입니다.
-    public virtual void OnAttackEnd() 
+    public virtual void OnAttackEnd()
     {
         timeSinceAttackEnd = 0.0f;
         UpdateToNextComboAttack();
@@ -321,32 +403,9 @@ public class CharacterControl : MonoBehaviour
         isAttacking = false;
     }
 
-    protected void UpdateToNextComboAttack() 
+    public virtual void OnHitEnd() 
     {
-        if (nextAttackCombo + 1 >= maxComboAttackCount)
-        {
-            nextAttackCombo = 0;
-        }
-        else 
-        {
-            nextAttackCombo++;
-        }
+        OnActionEnd();
+        isHit = false;
     }
-
-    //공격 후
-    protected void ComboAttackTimeUpdate() 
-    {
-        if (!isAttacking) 
-        {
-            timeSinceAttackEnd += Time.deltaTime;
-        }
-        if (timeSinceAttackEnd >= 0.2f) 
-        {
-            timeSinceAttackEnd = 0.0f;
-            nextAttackCombo = 0;
-        }
-    }
-
-    #endregion
-
 }

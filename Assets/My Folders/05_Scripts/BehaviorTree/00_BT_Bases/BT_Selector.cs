@@ -14,7 +14,7 @@ namespace BTSystem
         public override Result Execute()
         {
             Result result = children[currentChildIndex].Execute();
-            Debug.Log("[" + children[currentChildIndex].GetType() + "] Executed : " + result.ToString());
+            Debug.Log("[" + children[currentChildIndex].GetType() + "](" + children[currentChildIndex].DebugText + ") Executed : " + result.ToString());
 
             if (result == Result.RUNNING)
             {
